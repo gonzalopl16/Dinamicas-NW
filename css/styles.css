@@ -1,0 +1,60 @@
+:root {
+    --negro: #161313;
+    --blanco: #ffffffff;
+    --fondo : rgb(123, 43, 228);
+}
+
+body {
+    background-color: var(--fondo);
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--negro);
+    padding: 1rem 1rem;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+    padding: .8rem;
+}
+
+a:hover{
+    background-color: orange;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor__formulario{
+    background-color: rgba(63, 9, 133, 0.452);
+    padding: 5rem;
+    width: 20%;
+    margin: auto;
+    border: solid;
+    border-radius: .8rem;
+    margin-top: 8rem;
+}
+
+.sombra{
+    -webkit-box-shadow: 9px 11px 15px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 9px 11px 15px 0px rgba(0,0,0,0.12);
+    box-shadow: 9px 11px 15px 0px rgba(0,0,0,0.12);
+}
+
+.header {
+    background-image: url(../Imagenes/Hogwarts\ New\ World.png);
+    height: 52.7rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
