@@ -1,0 +1,23 @@
+{
+  "name": "dinamicas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzalopl16/Dinamicas-NW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzalopl16/Dinamicas-NW/issues"
+  },
+  "homepage": "https://github.com/gonzalopl16/Dinamicas-NW#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}

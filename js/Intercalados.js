@@ -14,10 +14,10 @@ reducio.addEventListener('submit', function(evento){
 
     const {emoji, palabra} = datos;
     if(emoji === '' || palabra === ''){
-        alert('llena los campo');
+        mostrarError('llena los campo');
     }else{
         let a = intercalar(emoji, palabra);
-        alert(a);
+        mostrarError(a);
     }
 })
 
@@ -37,4 +37,17 @@ function intercalar(emoji, palabra){
     }
     acum += emoji;
     return acum;
+}
+
+function mostrarError(mensaje){
+    const error = document.createElement('pre');
+    error.textContent = mensaje;
+    
+    error.classList.add('error');
+    formulario.appendChild(error);
+
+    //Set Timeout
+    setTimeout(() => {
+        error.remove();
+    }, 10000);
 }

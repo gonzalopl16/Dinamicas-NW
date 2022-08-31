@@ -27,7 +27,7 @@ function leer(evento){
 }
 
 function intercalar(emoji, palabra){
-    let acum = '```\n';
+    let acum="";
     let tamaño = palabra.length;
     for(i = 0; i<= tamaño-1 ; i++){
         if(i%2===0){
@@ -35,8 +35,7 @@ function intercalar(emoji, palabra){
         }else{
             acum += palabra[i] + palabra[i] + emoji + emoji +palabra[i] + palabra[i] + "\n";
         }
-    }
-    acum += "```";
+    };
     return acum
 }
 
