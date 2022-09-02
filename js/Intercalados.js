@@ -14,7 +14,7 @@ reducio.addEventListener('submit', function(evento){
 
     const {emoji, palabra} = datos;
     if(emoji === '' || palabra === ''){
-        mostrar('');
+        mostrar('')
     }else{
         let a = intercalar(emoji, palabra);
         mostrar(a);
