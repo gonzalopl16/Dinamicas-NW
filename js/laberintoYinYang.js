@@ -18,7 +18,7 @@ form.addEventListener('submit', function(evento){
     const {emojiFav, emoji1, emoji2} = datos;
     console.log(datos);
     if(emojiFav === '' || emoji1 === '' || emoji2 === ''){
-        alert('llena los campo');
+        mostrar('');
     }else{
         let a = funcion(emojiFav, emoji1, emoji2);
         mostrar(a);
@@ -66,11 +66,15 @@ function funcion(emojiFav, emoji1, emoji2){
 
 function mostrar(mensaje){
     const error = document.createElement('pre');
-    error.textContent = mensaje;
-    
-    error.classList.add('error');
+    error.classList.add('alert');
+    if(mensaje === ''){
+        error.classList.add('alert-danger');
+        error.textContent ='!Debes llenar los campos!';
+    }else{
+        error.classList.add('alert-warning');
+        error.textContent = mensaje;
+    }
     formulario.appendChild(error);
-
     //Set Timeout
     setTimeout(() => {
         error.remove();

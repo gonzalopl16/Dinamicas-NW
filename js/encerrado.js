@@ -14,10 +14,10 @@ reducio.addEventListener('submit', function(evento){
 
     const {emoji, palabra} = datos;
     if(emoji === '' || palabra === ''){
-        alert('llena los campo');
+        mostrar('');
     }else{
         let a = intercalar(emoji, palabra);
-        mostrarError(a);
+        mostrar(a);
     }
 })
 
@@ -49,13 +49,17 @@ function intercalar(emoji, palabra){
     return acum;
 }
 
-function mostrarError(mensaje){
+function mostrar(mensaje){
     const error = document.createElement('pre');
-    error.textContent = mensaje;
-    
-    error.classList.add('error');
+    error.classList.add('alert');
+    if(mensaje === ''){
+        error.classList.add('alert-danger');
+        error.textContent ='!Debes llenar los campos!';
+    }else{
+        error.classList.add('alert-warning');
+        error.textContent = mensaje;
+    }
     formulario.appendChild(error);
-
     //Set Timeout
     setTimeout(() => {
         error.remove();

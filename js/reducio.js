@@ -11,7 +11,7 @@ reducio.addEventListener('submit', function(evento){
 
     const {palabra} = datos;
     if(palabra === ''){
-        mostrar("Debe llenar los campos")
+        mostrar("")
     }else{
         let a = intercalar(palabra);
         mostrar(a);
@@ -36,12 +36,15 @@ function intercalar(palabra){
 
 function mostrar(mensaje){
     const error = document.createElement('pre');
-    error.textContent = mensaje;
-    
     error.classList.add('alert');
-    error.classList.add('alert-warning');
+    if(mensaje === ''){
+        error.classList.add('alert-danger');
+        error.textContent ='!Debes llenar los campos!';
+    }else{
+        error.classList.add('alert-warning');
+        error.textContent = mensaje;
+    }
     formulario.appendChild(error);
-
     //Set Timeout
     setTimeout(() => {
         error.remove();
