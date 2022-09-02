@@ -24,13 +24,14 @@ function leer(evento){
 }
 
 function intercalar(palabra){
-    let acum = palabra + "\n";
-    for (let i = 0; i <= palabra.length - 1; i++) {
+    let sustituto = palabra.toLowerCase();
+    let acum = sustituto + "\n";
+    for (let i = 0; i <= sustituto.length - 1; i++) {
         for (let j = 0; j <= i; j++) {
-            acum += palabra.charAt(j).toUpperCase();
+            acum += sustituto.charAt(j).toUpperCase();
         }
-        for (let k = i + 1; k <= palabra.length- 1; k++) {
-            acum += palabra.charAt(k);
+        for (let k = i + 1; k <= sustituto.length- 1; k++) {
+            acum += sustituto.charAt(k);
         }
         acum += "\n";
     }
