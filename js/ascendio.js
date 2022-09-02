@@ -37,11 +37,9 @@ function intercalar(palabra){
 function mostrar(mensaje){
     const error = document.createElement('pre');
     error.textContent = mensaje;
-    
     error.classList.add('alert');
     error.classList.add('alert-warning');
     formulario.appendChild(error);
-
     //Set Timeout
     setTimeout(() => {
         error.remove();
