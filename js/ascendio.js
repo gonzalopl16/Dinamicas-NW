@@ -11,7 +11,7 @@ reducio.addEventListener('submit', function(evento){
 
     const {palabra} = datos;
     if(palabra === ''){
-        mostrar("Debe llenar los campos")
+        mostrar('')
     }else{
         let a = intercalar(palabra);
         mostrar(a);
